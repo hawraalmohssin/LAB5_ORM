@@ -1,0 +1,36 @@
+{% extends 'home/base.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<h1> welcome back</h1>
+
+<br />
+
+<h2 class="sub-heder">this is your note</h2>
+
+
+{% if nots %}
+
+{% for note in nots %}
+
+     
+
+     <div class="card m-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{note.title}}</h5>
+          <p class="card-text">{{note.description}}</p>
+          
+         <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+
+{% endfor %}
+
+{% endif %}
+
+
+
+{% endblock %}
